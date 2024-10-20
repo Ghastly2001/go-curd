@@ -55,7 +55,7 @@ func (u *UserServiceImpl) GetAll() ([]*models.Student, error) {
 	cursor.Close(u.ctx)
 
 	if len(users) == 0 {
-		return nil, errors.New("documents not found")
+		return nil, errors.New("documents are not found")
 	}
 	return users, nil
 }
